@@ -76,12 +76,12 @@ def setupforPVMismatch(portraitorlandscape, sensorsy):
     cellCenterPVM=[]
     
     if portraitorlandscape == 'portrait':                    
-        cellsy = 12
         cellsx = 8
+        cellsy = 12
     else:
         stdpl = stdpl.transpose()
-        cellsy = 8
         cellsx = 12
+        cellsy = 8
                                 
     if sensorsy != cellsy:
         for i in range (0, cellsy):
@@ -90,7 +90,7 @@ def setupforPVMismatch(portraitorlandscape, sensorsy):
     return cellCenterPVM, stdpl, cellsx, cellsy
 
 
-def calculateVFPVMismatch(cellCenterPVM, stdpl, cellsy, cellsx, sensorsy, frontGTIrow, backGTIrow):
+def calculateVFPVMismatch(cellCenterPVM, stdpl, cellsx, cellsy, sensorsy, frontGTIrow, backGTIrow):
     r''' calls PVMismatch with all the pre-generated values on view factor.
     
     Example:
